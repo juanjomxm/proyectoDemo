@@ -8,44 +8,73 @@
 
     <style>
 
-        h1 {
-            background-color: green;
-            color: white;
+        body {
+            background-image: url("https://miro.medium.com/max/1024/1*vxjAHkrXbGG6gOiPZgjeZA.jpeg");
+            background-size: cover;
         }
 
-        .subtitulo {
+        h1 {
+            background-color: transparent;
+            color: white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .titulo img{
+            width: 360px;
+            height: 300px;
+            margin-left: 500px;
+        }
+            
+        
+        .facebook {
             background-color: blue;
             color: white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 100px;
+            margin-top: 40px;
         }
 
-        #lista {
-            color: red;
+        .facebook a{
+            color: white;
+            font-size: 20px;
+        }
+        
+
+        .facebook img {
+            width: 30px;
+            height: 30px;
+            margin-top: 20px;
         }
 
-        a[href="https://www.facebook.com/juanjo.alvarezzuluaga"] {
-            color: blue;
-        }
 
     </style>
 </head>
 <body>
     
-    <section>
+    <section class="titulo" >
 
-    <h1>Este es el comienzo como desarrollador web</h1>
-    <h2 class="subtitulo">Estoy en facebook como JuanJo Alvarez Zuluaga</h2>
-    <p>despues de tanto batallar pude conectar ubuntu con github, disciplina y constancia</p>
+        <h1>Este es el comienzo como desarrollador web</h1>
 
-    <ul id="lista">
-        
-        <li>Disciplina</li>
-        <li>Constancia</li>
-
-    </ul>
+        <img src="https://i0.wp.com/www.trabajaytriunfa.com/wp-content/uploads/2016/10/la-disciplina.jpg?fit=712%2C350&ssl=1" alt="disciplina">
 
     </section>
 
-    <a href="https://www.facebook.com/juanjo.alvarezzuluaga">Mi facebook</a>
+    <section class="facebook">
+
+        <h2>Estoy en facebook como JuanJo Alvarez Zuluaga</h2>
+       
+        <a href="https://www.facebook.com/juanjo.alvarezzuluaga">Mi facebook</a>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Logo_de_Facebook.png" alt="logo">
+
+    </section>
+
+    
 
 </body>
 
