@@ -2,6 +2,12 @@ function incio() {
     let botonPersonaje = document.getElementById("seleccionar-personaje")
     botonPersonaje.addEventListener("click", seleccionarPersonaje)
 
+    let articuloPersonaje = document.getElementById("articulo-itachi")
+    articuloPersonaje.style.display = "none"
+
+    let articuloPersonaje2 = document.getElementById("articulo-kakashi")
+    articuloPersonaje2.style.display = "none"
+
 }
 
 function seleccionarPersonaje() {
@@ -12,18 +18,18 @@ function seleccionarPersonaje() {
         let spanPersonaje = document.getElementById("personaje-escogido")
 
         if(inputItachi.checked) {
-            spanPersonaje.innerHTML = "itachi"
+            spanPersonaje.innerHTML = "Itachi"
         } else if(inputKakashi.checked) {
-            spanPersonaje.innerHTML = "kakashi"
+            spanPersonaje.innerHTML = "Kakashi"
         } else if(inputMinato.checked) {
-            spanPersonaje.innerHTML = "minato"
+            spanPersonaje.innerHTML = "Minato"
         } else if(inputJiraiya.checked) {
-            spanPersonaje.innerHTML = "jiraiya"
+            spanPersonaje.innerHTML = "Jiraiya"
         }  else {
             alert("escoge algo")
         }
         
-       
+        subtituloPersonaje()     
 }
 
 
