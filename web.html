@@ -8,16 +8,42 @@
 </head>
 <body>
 
+    <section id="nombre-y-apellidos">
+
     <h1>Escribe tu nombre</h1>
     <input id="nombre" placeholder="Nombre">
     <input id="apellido" placeholder="Apellidos"> 
     <button>Seleccionar</button>
     <p id="resultado"></p>
 
+    </section>
+
+    <section id="seleccionar-auto">
+
+        <h2>Escoge el auto que mas te guste</h2>
+
+        <label for="ferrari">Ferarri</label>
+        <input type="radio" name="auto" id="ferrari">
+
+        <label for="lamborghini">Lamborghini</label>
+        <input type="radio" name="auto" id="lamborghini">
+
+        <label for="bugatti">Bugatti</label>
+        <input type="radio" name="auto" id="bugatti">
+
+        <label for="tesla">Tesla</label>
+        <input type="radio" name="auto" id="tesla">
+
+        <button id="auto-elegido">Seleccionar</button>
+
+        <p id="auto-escogido"></p>
+
+
+    </section>
+
     
 
-
-    <script src="./web.js"></script>
+<script src="./web.js"></script>
     
 </body>
 </html>
