@@ -5,6 +5,9 @@ boton.addEventListener("click", nombreYApellido)
 const botonAuto = document.querySelector("#auto-elegido")
 botonAuto.addEventListener("click", seleccionarAuto)
 
+const botonPersonalizar = document.querySelector("#boton-personalizacion")
+botonPersonalizar.addEventListener("click", personalizarAuto)
+
 
 
 function nombreYApellido(){
@@ -47,4 +50,15 @@ function seleccionarAuto() {
         pAuto.innerHTML = "Escoge algun auto" 
     }
 
+}
+
+
+
+function personalizarAuto(){
+    const inputColor = document.querySelector("#color")
+    const inputTipo = document.querySelector("#tipo")
+    const parrafoPersonalizacion = document.querySelector("#resultado-personalizacion")
+    const autoPersonalizado ="Tu nuevo auto sera " + inputColor.value + " " + inputTipo.value
+    parrafoPersonalizacion.innerHTML = autoPersonalizado
+     
 }
