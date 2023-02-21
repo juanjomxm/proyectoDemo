@@ -62,3 +62,23 @@ function personalizarAuto(){
     parrafoPersonalizacion.innerHTML = autoPersonalizado
      
 }
+
+const botonDescuento = document.querySelector("#boton-cupon")
+botonDescuento.addEventListener("click", cuponDescuento)
+
+function cuponDescuento(){
+    const inputPrecioAuto = document.querySelector("#precio-auto")
+    const inputCuponDescuento = document.querySelector("#cupon")
+    const pCuponAuto = document.querySelector("#resultado-descuento")
+    const precio = inputPrecioAuto.value
+    const cupon = inputCuponDescuento.value
+    let descuento
+
+    if(cupon == "Premium"){
+        descuento = 10
+        pCuponAuto.innerHTML = "Tu carro te quedaria en $ " + [precio * (100 - descuento) / 100]
+    } else if(cupon == "VIP"){
+        descuento = 5
+        pCuponAuto.innerHTML = "Tu carro te quedaria en $ " + [precio * (100 - descuento) / 100]
+    }
+}
