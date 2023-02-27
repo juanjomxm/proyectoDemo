@@ -8,6 +8,9 @@ botonAuto.addEventListener("click", seleccionarAuto)
 const botonPersonalizar = document.querySelector("#boton-personalizacion")
 botonPersonalizar.addEventListener("click", personalizarAuto)
 
+const botonCientifico = document.querySelector("#boton-cientifico")
+botonCientifico.addEventListener("click", seleccionarCientifico)
+
 
 
 function nombreYApellido(){
@@ -23,6 +26,7 @@ function seleccionarAuto() {
     const inputAuto = document.querySelector("#ferrari")
     let imgFerrari = document.createElement("img")
     imgFerrari.setAttribute("src", "https://sites.google.com/site/autosdeportivosr/_/rsrc/1464066608117/home/ferrari/Ferrari-FXX-K-1.jpg" )
+    
     const inputAuto2 = document.querySelector("#lamborghini")
     let imgLambo = document.createElement("img")
     imgLambo.setAttribute("src", "https://www.elcarrocolombiano.com/wp-content/uploads/2019/09/20190916-LAMBORGHINI-SIAN-FKP-37-HIBRIDO-PRECIO-CARACTERISTICAS-01.jpg")
@@ -80,5 +84,29 @@ function cuponDescuento(){
     } else if(cupon == "VIP"){
         descuento = 5
         pCuponAuto.innerHTML = "Tu carro te quedaria en $ " + [precio * (100 - descuento) / 100]
+    }
+}
+
+    
+
+
+function seleccionarCientifico() {
+    const inputEinstein = document.querySelector("#einstein")
+    const inputNewton = document.querySelector("#newton")
+    const inputTesla = document.querySelector("#tesla1")
+    const inputTuring = document.querySelector("#turing")
+    const pCientifico = document.querySelector("#parrafo-cientifico")
+
+    if(inputEinstein.checked){
+        pCientifico.innerHTML = "Albert Einstein: En 1905, cuando era un joven físico desconocido, empleado en la Oficina de Patentes de Berna, publicó su teoría de la relatividad especial. En ella incorporó, en un marco teórico simple fundamentado en postulados físicos sencillos, conceptos y fenómenos estudiados antes por Henri Poincaré y Hendrik Lorentz. Como una consecuencia lógica de esta teoría, dedujo la ecuación de la física más conocida a nivel popular: la equivalencia masa-energía, E=mc². Ese año, publicó otros trabajos que sentarían algunas de las bases de la física estadística y de la mecánica cuántica. "
+    } else if (inputNewton.checked){
+        pCientifico.innerHTML = "Isaac Newton: Entre sus hallazgos científicos se encuentran el descubrimiento —considerado el inicio de la espectroscopia— de que el espectro de color que se observa cuando la luz blanca pasa por un prisma es inherente a esa luz, en lugar de provenir del prisma (como había sido postulado por Roger Bacon en el siglo xiii); su argumentación sobre la posibilidad de que la luz estuviera compuesta por partículas; su desarrollo de una ley de convección térmica, que describe la tasa de enfriamiento de los objetos expuestos al aire; sus estudios sobre la velocidad del sonido en el aire; y su propuesta de una teoría sobre el origen de las estrellas."
+    } else if (inputTesla.checked){
+        pCientifico.innerHTML = " Nikola Tesla: Tesla, que nació y se crio en el Imperio austríaco, estudió ingeniería y física en la década de 1870 sin obtener un título, aunque adquirió experiencia práctica a principios de la década de 1880 trabajando en telefonía para la empresa Continental Edison, que por entonces lideraba la nueva industria de la energía eléctrica. En 1884 emigró a Estados Unidos, donde adquirió la doble nacionalidad. Trabajó durante un corto tiempo en Edison Machine Works en Nueva York antes de emprender el camino por su cuenta. Con la ayuda de socios para financiar y comercializar sus ideas, Tesla fundó laboratorios y empresas en Nueva York para desarrollar dispositivos eléctricos y mecánicos. Su motor asíncrono de corriente alterna (CA) y las patentes relacionadas con el sistema polifásico, licenciadas por Westinghouse Electric en 1888, le reportaron grandes sumas de dinero y además se convirtieron en la piedra angular del sistema polifásico finalmente comercializado por esta empresa."
+    } else if (inputTuring.checked){
+        pCientifico.innerHTML = " Alan Turing: Durante la segunda guerra mundial, trabajó en descifrar los códigos nazis, particularmente los de la máquina Enigma, y durante un tiempo fue el director de la sección Naval Enigma de Bletchley Park. Se ha estimado que su trabajo acortó la duración de esa guerra entre dos y cuatro años.​ Tras la guerra, diseñó uno de los primeros computadores electrónicos programables digitales en el Laboratorio Nacional de Física del Reino Unido y poco tiempo después construyó otra de las primeras máquinas en la Universidad de Mánchester"
+       
+    } else{
+        pCientifico.innerHTML = "Escoge un cientifico"
     }
 }
