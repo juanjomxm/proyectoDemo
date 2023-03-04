@@ -19,6 +19,9 @@ botonDescuento.addEventListener("click", cuponDescuento)
 const botonMediana = document.querySelector("#boton-mediana")
 botonMediana.addEventListener("click", calcularMediana)
 
+const botonCuponCientifico = document.querySelector("#boton-cupon-cientifico")
+botonCuponCientifico.addEventListener("click", validarCuponCientifico)
+
 }
 
 function nombreYApellido(){
@@ -165,6 +168,29 @@ function calcularMediana(listaDesordenada){ // El codigo esta bueno, no he podid
 function ordenarLista(listaDesordenada){
     const listaMediana = listaDesordenada.sort((a,b) => a - b)
     return listaMediana
+}
+
+function validarCuponCientifico(){
+    const inputPrecioCientifico = document.querySelector("#precio")
+    const inputCuponCientifico = document.querySelector("#cupon-cientifico")
+    const precioCien = inputPrecioCientifico.value
+    const cuponCien = inputCuponCientifico.value
+    const parrafoCientifico = document.querySelector("#parrafo-cupon-cientifico")
+    const cuponesCientificos = [
+        {name:"einstein", esteCupon: 40},
+        {name:"newton", esteCupon: 30},
+        {name:"tesla", esteCupon: 20},
+        {name:"turing", esteCupon: 10},
+    ]
+
+    const cuponIngresado = cuponesCientificos.find((arraysCupones) => arraysCupones.name == cuponCien)
+
+    if(cuponIngresado){
+        esteCupon = cuponIngresado.esteCupon
+        parrafoCientifico.innerText = "Con este cupon te queda en " + Math.floor(precioCien *(100 - esteCupon) / 100)
+    } else {
+        "ingresa el cupon de un cientifico"
+    }
 }
 
 window.addEventListener("load", elInicio)
