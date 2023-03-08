@@ -1,4 +1,3 @@
-
 function elInicio(){
 
 const boton = document.querySelector("button")
@@ -21,6 +20,9 @@ botonMediana.addEventListener("click", calcularMediana)
 
 const botonCuponCientifico = document.querySelector("#boton-cupon-cientifico")
 botonCuponCientifico.addEventListener("click", validarCuponCientifico)
+
+const botonPoema = document.querySelector("#boton-poema")
+botonPoema.addEventListener("click", mostrarPoema)
 
 }
 
@@ -151,9 +153,7 @@ function calcularMediana(listaDesordenada){ // El codigo esta bueno, no he podid
     const lista = ordenarLista(listaDesordenada)
     const esPar2 = esPar(lista)
    
-
-
-   if(esPar2){
+    if(esPar2){
         const mitadPar = Math.floor((lista.length / 2) - 1)
         const mitadPar2 = Math.floor((lista.length / 2))
         const sumaIndex = ((lista[mitadPar]) + (lista[mitadPar2])) / 2
@@ -190,6 +190,32 @@ function validarCuponCientifico(){
         parrafoCientifico.innerText = "Con este cupon te queda en " + Math.floor(precioCien *(100 - esteCupon) / 100)
     } else {
         "ingresa el cupon de un cientifico"
+    }
+}
+
+function mostrarPoema(){
+    const inputPoema = document.querySelector("#poema")
+    const parrafoPoema = document.querySelector("#parrafo-poema")
+    const personaPoema = inputPoema.value
+    const nombrePersona = "Alejandra"
+
+    if(personaPoema == nombrePersona){
+        parrafoPoema.innerText = `¡Déjame decirte lindos versos
+        Que en mi boca tengo para expresarte!
+        No existe una mejor sensacion que tus besos
+        Y hasta en mis sueños te busco para besarte
+
+        Son por su dulzura terciopelos caros,
+        Son tus ojos dos cristales y suspiro al mirarte...
+        ¡Déjame decirte lindos versos 
+        Que fueron creados para admirarte!
+        
+        ¡Te deseo tanto!...
+        No hago mas que amarte
+        Y en los peores dias, siempre estare para apoyarte`
+        
+    } else {
+        parrafoPoema.innerText = "Este poema no es para ti"
     }
 }
 
